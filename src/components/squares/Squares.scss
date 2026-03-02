@@ -1,0 +1,18 @@
+.squares-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.square {
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+  pointer-events: auto;
+}
