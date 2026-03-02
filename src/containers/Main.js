@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState, useContext} from "react";
 import Header from "../components/header/Header";
 import Greeting from "./greeting/Greeting";
 import Skills from "./skills/Skills";
@@ -9,8 +9,10 @@ import Education from "./education/Education";
 import ScrollToTopButton from "./topbutton/Top";
 import Profile from "./profile/Profile";
 import SplashScreen from "./splashScreen/SplashScreen";
+import Squares from "../components/squares/Squares";
 import {splashScreen} from "../portfolio";
 import {StyleProvider} from "../contexts/StyleContext";
+import StyleContext from "../contexts/StyleContext";
 import {useLocalStorage} from "../hooks/useLocalStorage";
 import "./Main.scss";
 
@@ -38,6 +40,15 @@ const Main = () => {
 
   return (
     <StyleProvider value={{isDark: isDark, changeTheme: changeTheme}}>
+      {isDark && (
+        <Squares 
+          speed={0.5}
+          size={40}
+          direction="diagonal"
+          borderColor="#271E37"
+          hoverColor="#222222"
+        />
+      )}
       <div className={isDark ? "dark-mode" : null}>
         {isShowingSplashAnimation && splashScreen.enabled ? (
           <SplashScreen />
