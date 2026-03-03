@@ -3,6 +3,7 @@
   "name": "developerfolio",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "npm@10.0.0",
   "dependencies": {
     "@babel/runtime": "^7.28.6",
     "colorthief": "^2.3.0",
@@ -15,6 +16,7 @@
     "react-twitter-embed": "3.0.3"
   },
   "scripts": {
+    "preinstall": "npm config set legacy-peer-deps true",
     "predeploy": "npm run build",
     "dev": "node fetch.js && vite",
     "start": "npm run dev",
