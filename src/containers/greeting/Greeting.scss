@@ -55,6 +55,10 @@
   background: none !important;
 }
 
+.greeting-text-p:not(.dark-mode) {
+  color: #000000 !important;
+}
+
 .greeting-image-div > img {
   max-width: 100%;
   height: auto;
