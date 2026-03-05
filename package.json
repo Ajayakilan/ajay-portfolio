@@ -23,7 +23,8 @@
     "preview": "vite preview",
     "deploy": "gh-pages -b master -d dist",
     "format": "prettier --write \"./**/*.{js,css,json,scss}\"",
-    "check-format": "prettier -c \"./**/*.{js,css,json,scss}\""
+    "check-format": "prettier -c \"./**/*.{js,css,json,scss}\"",
+    "vercel-build": "npm install --legacy-peer-deps && node fetch.js && vite build"
   },
   "browserslist": {
     "production": [
