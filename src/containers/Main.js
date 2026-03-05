@@ -49,7 +49,7 @@ const Main = () => {
           hoverColor="#222222"
         />
       )}
-      <div className={isDark ? "dark-mode" : null}>
+      <div className={isDark ? "dark-mode" : "light-mode"} style={{position: 'relative', zIndex: 1}}>
         {isShowingSplashAnimation && splashScreen.enabled ? (
           <SplashScreen />
         ) : (
