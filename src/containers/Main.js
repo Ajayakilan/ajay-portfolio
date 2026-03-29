@@ -4,6 +4,7 @@ import Greeting from "./greeting/Greeting";
 import Skills from "./skills/Skills";
 import StackProgress from "./skillProgress/skillProgress";
 import Projects from "./projects/Projects";
+import MyProjects from "./myProjects/MyProjects";
 import Footer from "../components/footer/Footer";
 import Education from "./education/Education";
 import ScrollToTopButton from "./topbutton/Top";
@@ -60,6 +61,7 @@ const Main = () => {
             <StackProgress />
             <Education />
             <Projects />
+            <MyProjects />
             <Profile />
             <Footer />
             <ScrollToTopButton />

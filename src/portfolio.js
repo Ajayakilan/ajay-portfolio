@@ -208,6 +208,49 @@ const twitterDetails = {
   display: true // Set true to display this section, defaults to false
 };
 
+const myProjects = {
+  title: "Projects",
+  subtitle: "Things I've Built",
+  display: true,
+  projects: [
+    {
+      title: "GPS Vehicle Tracking System",
+      description: "A GPS-based application for real-time location tracking and navigation.",
+      category: "Industry Experience",
+      details: {
+        description: "This is a production-level GPS vehicle tracking and fleet management web application built using React and modern frontend technologies. The application provides real-time vehicle tracking, geofencing, fleet management, analytics dashboards, report generation, and secure share-tracking features.",
+        role: "Fullstack Developer responsible for UI development and Backend, API integration, real-time tracking modules, geolocation features, and dashboard implementation.",
+        technologies: "React, Vite, React Router, Tailwind CSS, Leaflet, React-Leaflet, Leaflet Draw, Recharts, Axios, React Toast, React Window.",
+        features: "Real-time GPS tracking, geofencing, vehicle & driver management, analytics dashboards, Excel report generation, authentication with JWT, shareable tracking links, alerts and notifications."
+      },
+      link: ""
+    },
+    {
+      title: "Used Electronics and Car Selling System",
+      description: "Personal developer portfolio built with React and modern CSS animations.",
+      category: "Academic Work",
+      details: {
+        description: "This is a full-stack marketplace web application designed for buying and selling used electronics and cars. The platform allows users to list products, browse available items, communicate with sellers, and manage listings through a secure and user-friendly dashboard.",
+        role: "Full Stack Developer responsible for UI development, backend integration, database design, JWT authentication system, and complete CRUD functionality.",
+        technologies: "React, JavaScript, Tailwind CSS, Express.js, REST APIs, JWT Authentication.",
+        features: "User registration and login with secure authentication, product listing and management, search and filtering, image upload for products, seller dashboard, responsive UI, and complete CRUD operations for marketplace listings."
+      },
+      link: ""
+    },
+    {
+      title: "Personal Health Trainer Habit To-Do App",
+      description: "This is a health-focused productivity web application designed to help users build healthy habits",
+      category: "Personal Project",
+      details: {
+        description: "A productivity and wellness app that helps users track daily workouts, habits, water intake, and health goals through an interactive to-do dashboard.",
+        fullDescription: "Personal Health Trainer is a health-focused productivity web application designed to help users build healthy habits and manage daily fitness routines. The app combines a to-do planner + fitness tracker to improve consistency, discipline, and lifestyle management. The goal of this project was to build a clean, responsive, and user-friendly system that allows users to track daily health activities and stay accountable to their fitness goals.",
+        technologies: "React, Vite, React Router, Tailwind CSS, Leaflet, React-Leaflet, Leaflet Draw, Recharts, Axios, React Toast, React Window."
+      },
+      link: ""
+    }
+  ]
+};
+
 const isHireable = false; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
 
 export {
@@ -222,5 +265,6 @@ export {
   contactInfo,
   twitterDetails,
   isHireable,
-  resumeSection
+  resumeSection,
+  myProjects
 };
