@@ -10,6 +10,8 @@ import Squares from "../../components/squares/Squares";
 import {illustration, greeting} from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
 // import resumePdf from "../../../assets/Ajay_Resume.docx";
+
+
 import resumePdf from "../../assets/Ajayakilan_CV.pdf";
 import manOnTableSvg from "../../assets/images/manOnTable.svg";
 
