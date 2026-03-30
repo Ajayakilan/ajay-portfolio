@@ -18,18 +18,17 @@
 }
 
 .my-projects-grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
   justify-content: center;
-  align-items: stretch;
   gap: 30px;
-  padding: 20px 0 40px 0;
+  padding: 20px 16px 40px 16px;
 }
 
 /* Card styles from Uiverse.io by imtausef */
 .parent {
-  width: 300px;
-  padding: 20px;
+  width: 100%;
+  padding: 10px;
   perspective: 1000px;
   display: flex;
 }
@@ -156,14 +155,137 @@
   color: #8ed500;
 }
 
+/* Large tablets */
+@media (max-width: 1024px) {
+  .my-projects-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 24px;
+  }
+}
+
+/* Tablets */
 @media (max-width: 768px) {
   .my-projects-title {
     font-size: 30px;
   }
 
+  .my-projects-subtitle {
+    font-size: 14px;
+  }
+
   .my-projects-grid {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 20px 12px 40px 12px;
+  }
+
+  .parent {
+    padding: 6px;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+
+  .project-modal-card {
+    padding: 40px 24px 30px;
+  }
+
+  .modal-title {
+    font-size: 22px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .my-projects-header {
+    margin-bottom: 24px;
+  }
+
+  .my-projects-title {
+    font-size: 24px;
+  }
+
+  .my-projects-subtitle {
+    font-size: 13px;
+  }
+
+  .my-projects-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 16px 8px 32px 8px;
+  }
+
+  .parent {
+    padding: 4px;
+    perspective: none;
+  }
+
+  .card:hover {
+    transform: none;
+    background-position: 0 0, 0 0;
+  }
+
+  .content-box {
+    padding: 48px 16px 16px;
+  }
+
+  .content-box .card-title {
+    font-size: 15px;
+    min-height: unset;
+    transform: none;
+  }
+
+  .content-box .card-content {
+    font-size: 11px;
+    transform: none;
+  }
+
+  .content-box .see-more {
+    transform: none;
+    font-size: 9px;
+    padding: 0.4rem 0.8rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .date-box {
+    top: 12px;
+    right: 12px;
+    height: 46px;
+    width: 46px;
+    padding: 6px;
+    transform: none;
+  }
+
+  .date-box .date {
+    font-size: 16px;
+  }
+
+  .project-modal-overlay {
+    padding: 12px;
+    align-items: flex-end;
+  }
+
+  .project-modal-card {
+    padding: 36px 16px 20px;
+    width: 100%;
+    max-height: 85vh;
+  }
+
+  .modal-title {
+    font-size: 18px;
+  }
+
+  .modal-desc {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+
+  .modal-link {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
   }
 }
 
@@ -184,6 +306,8 @@
   padding: 50px 40px 40px;
   width: 90%;
   max-width: 650px;
+  max-height: 90vh;
+  overflow-y: auto;
   position: relative;
   box-shadow: 0 0 60px rgba(142, 213, 0, 0.2);
 }
